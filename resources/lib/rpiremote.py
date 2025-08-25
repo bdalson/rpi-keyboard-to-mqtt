@@ -158,6 +158,11 @@ class RemoteForward:
                         'sensor',
                         code,
                         'Key Press'))
+                    time.sleep(0.5)
+                    self.LW.log(self.NOTIFIER.Send(
+                        'sensor',
+                        'None',
+                        'Key Press'))
         except KeyboardInterrupt:
             self.KEEPRUNNING = False
         except Exception as e:
